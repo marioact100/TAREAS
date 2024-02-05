@@ -1,6 +1,22 @@
 # TAREAS
 Clase BASES DE DATOS RELACIONALES
 
-SE COMPARTE LINK DEL ARCHIVO, YA QUE EL ARCHIVO EN PDF Y COMPRIMIDO ES MAYOR A LOS 25MB
-
 https://www.figma.com/file/cjrSyNidqvYQPuwTXYaMqw/TAREA-3?type=whiteboard&node-id=0-1&t=OOYaMkOyDX7Eyy3P-0 
+
+OPERACIONES DE ALGÉBRA RELACIONAL QUE UTILIZARÉ (4):
+
+Proyecto (id_proyecto, nombre del proyecto, descripcion, fecha de inicio, rendimiento esperado, estrategia de inversion, rendimiento obtenido)
+Inversionista (cantidad de aportaciones, nombre del inversionista, correo electronico, direccion, capital del inversionista, teléfono, id_usuario)
+Inversionistaproyecto (aportacion, dividendos, reinversiones, porcentaje de participacion, instrumentos financieros, id_proyecto, id_reinversiones)
+
+Selección (σ): σrendimiento obtenido>0.50 (Proyecto) (Seleccionar todos los proyectos que han obtenido un rendimientomayor al 50%).
+
+Proyección (π): πnombre del inversionista, correo electronico (Inversionista) (Obtener una lista de inversionistas con su nombre y con su correo electronico).
+
+Join (X): 
+
+Proyecto [X] id_proyecto 
+Inversionistaproyecto
+
+Unión (U): Inversionista U Inversionistaproyecto (Combina los datos del inversionista con Inversionistaproyecto para poder obtener todos lo inversionistas junto con los proyectos en los que participan)
+
