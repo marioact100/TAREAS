@@ -1,106 +1,113 @@
 TAREA 4
 
-|-- Crear la tabla Proyecto|
-|:----|
-|CREATE TABLE Proyecto (|
-|    id_proyecto INT  IDENTITY(0, 1) PRIMARY KEY,|
-|    nombre_proyecto VARCHAR(100),|
-|    descripcion TEXT,|
-|    fecha_inicio DATE,|
-|    rendimiento_esperado DECIMAL(10, 2),|
-|    estrategia_inversion VARCHAR(100),|
-|    rendimiento_obtenido DECIMAL(10, 2)|
-|);|
-|-- Insertar registros en la tabla Proyecto|
-|INSERT INTO Proyecto (nombre_proyecto, descripcion, fecha_inicio, rendimiento_esperado, estrategia_inversion, rendimiento_obtenido) VALUES|
-|('Proyecto 1', 'Descripción del proyecto 1', '2023-01-01', 50000.00, 'Estrategia 1', 55000.00),|
-|('Proyecto 2', 'Descripción del proyecto 2', '2023-02-15', 75000.00, 'Estrategia 2', 82000.00),|
-|('Proyecto 3', 'Descripción del proyecto 3', '2023-03-10', 100000.00, 'Estrategia 3', 110000.00),|
-|('Proyecto 4', 'Descripción del proyecto 4', '2023-04-20', 30000.00, 'Estrategia 4', 32000.00),|
-|('Proyecto 5', 'Descripción del proyecto 5', '2023-05-05', 60000.00, 'Estrategia 5', 65000.00),|
-|('Proyecto 6', 'Descripción del proyecto 6', '2023-06-15', 90000.00, 'Estrategia 6', 95000.00),|
-|('Proyecto 7', 'Descripción del proyecto 7', '2023-07-20', 40000.00, 'Estrategia 7', 42000.00),|
-|('Proyecto 8', 'Descripción del proyecto 8', '2023-08-10', 80000.00, 'Estrategia 8', 86000.00),|
-|('Proyecto 9', 'Descripción del proyecto 9', '2023-09-05', 120000.00, 'Estrategia 9', 130000.00),|
-|('Proyecto 10', 'Descripción del proyecto 10', '2023-10-25', 20000.00, 'Estrategia 10', 21000.00),|
-|('Proyecto 11', 'Descripción del proyecto 11', '2023-11-15', 40000.00, 'Estrategia 11', 43000.00),|
-|('Proyecto 12', 'Descripción del proyecto 12', '2023-12-05', 30000.00, 'Estrategia 12', 32000.00),|
-|('Proyecto 13', 'Descripción del proyecto 13', '2024-01-10', 50000.00, 'Estrategia 13', 53000.00),|
-|('Proyecto 14', 'Descripción del proyecto 14', '2024-02-20', 70000.00, 'Estrategia 14', 75000.00),|
-|('Proyecto 15', 'Descripción del proyecto 15', '2024-03-15', 90000.00, 'Estrategia 15', 95000.00),|
-|('Proyecto 16', 'Descripción del proyecto 16', '2024-04-10', 60000.00, 'Estrategia 16', 64000.00),|
-|('Proyecto 17', 'Descripción del proyecto 17', '2024-05-05', 80000.00, 'Estrategia 17', 85000.00),|
-|('Proyecto 18', 'Descripción del proyecto 18', '2024-06-20', 100000.00, 'Estrategia 18', 105000.00),|
-|('Proyecto 19', 'Descripción del proyecto 19', '2024-07-15', 150000.00, 'Estrategia 19', 160000.00),|
-|('Proyecto 20', 'Descripción del proyecto 20', '2024-08-10', 200000.00, 'Estrategia 20', 220000.00);|
-|-- Crear la tabla Inversionista|
-|CREATE TABLE Inversionista (|
-|    id_usuario INT IDENTITY(0, 1) PRIMARY KEY,|
-|    cantidad_aportaciones INT,|
-|    nombre_inversionista VARCHAR(100),|
-|    correo_electronico VARCHAR(100),|
-|    direccion VARCHAR(150),|
-|    capital_inversionista DECIMAL(15, 2),|
-|    telefono VARCHAR(20)|
-|);|
-|-- Insertar registros en la tabla Inversionista|
-|INSERT INTO Inversionista (cantidad_aportaciones, nombre_inversionista, correo_electronico, direccion, capital_inversionista, telefono) VALUES|
-|(5, 'Inversionista 1', 'inversionista1@example.com', 'Calle 123, Ciudad A', 50000.00, '123456789'),|
-|(3, 'Inversionista 2', 'inversionista2@example.com', 'Avenida XYZ, Ciudad B', 75000.00, '987654321'),|
-|(7, 'Inversionista 3', 'inversionista3@example.com', 'Calle ABC, Ciudad C', 100000.00, '456789123'),|
-|(4, 'Inversionista 4', 'inversionista4@example.com', 'Avenida 456, Ciudad D', 30000.00, '789123456'),|
-|(6, 'Inversionista 5', 'inversionista5@example.com', 'Calle EFG, Ciudad E', 60000.00, '321654987'),|
-|(8, 'Inversionista 6', 'inversionista6@example.com', 'Avenida LMN, Ciudad F', 90000.00, '654987321'),|
-|(3, 'Inversionista 7', 'inversionista7@example.com', 'Calle OPQ, Ciudad G', 40000.00, '987321654'),|
-|(5, 'Inversionista 8', 'inversionista8@example.com', 'Avenida RST, Ciudad H', 80000.00, '321987654'),|
-|(9, 'Inversionista 9', 'inversionista9@example.com', 'Calle UVW, Ciudad I', 120000.00, '654321987'),|
-|(2, 'Inversionista 10', 'inversionista10@example.com', 'Avenida XYZ, Ciudad J', 20000.00, '789654123'),|
-|(7, 'Inversionista 11', 'inversionista11@example.com', 'Calle ABC, Ciudad K', 40000.00, '456123789'),|
-|(4, 'Inversionista 12', 'inversionista12@example.com', 'Avenida 123, Ciudad L', 30000.00, '321789456'),|
-|(6, 'Inversionista 13', 'inversionista13@example.com', 'Calle 456, Ciudad M', 50000.00, '987456123'),|
-|(8, 'Inversionista 14', 'inversionista14@example.com', 'Avenida 789, Ciudad N', 70000.00, '654123987'),|
-|(10, 'Inversionista 15', 'inversionista15@example.com', 'Calle 101112, Ciudad O', 90000.00, '789456123'),|
-|(5, 'Inversionista 16', 'inversionista16@example.com', 'Avenida 131415, Ciudad P', 60000.00, '321987456'),|
-|(7, 'Inversionista 17', 'inversionista17@example.com', 'Calle 161718, Ciudad Q', 80000.00, '654321789'),|
-|(9, 'Inversionista 18', 'inversionista18@example.com', 'Avenida 192021, Ciudad R', 100000.00, '987654321'),|
-|(12, 'Inversionista 19', 'inversionista19@example.com', 'Calle 222324, Ciudad S', 150000.00, '321789654'),|
-|(15, 'Inversionista 20', 'inversionista20@example.com', 'Avenida 252627, Ciudad T', 200000.00, '654321987');|
-|-- Crear la tabla Inversionista Proyecto|
-|CREATE TABLE Inversionista_Proyecto    (|
-|    id_reinversiones INT IDENTITY(0, 1) PRIMARY KEY,|
-|    aportacion DECIMAL(15, 2),|
-|    dividendos DECIMAL(15, 2),|
-|    reinversiones DECIMAL(15, 2),|
-|    porcentaje_participacion DECIMAL(5, 2),|
-|    instrumentos_financieros VARCHAR(100),|
-|    id_proyecto INT,|
-|    id_inversionista INT,|
-|    FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto),|
-|    FOREIGN KEY (id_inversionista) REFERENCES Inversionista(id_usuario)|
-|);|
-|-- Insertar registros en la tabla Inversionista Proyecto|
-|INSERT INTO Inversionista_Proyecto (aportacion, dividendos, reinversiones, porcentaje_participacion, instrumentos_financieros, id_inversionista) VALUES|
-|(5000.00, 2000.00, 1000.00, 10.00, 'Acciones', 1),|
-|(7000.00, 3000.00, 1500.00, 7.00, 'Bonos', 2),|
-|(10000.00, 4000.00, 2000.00, 15.00, 'Acciones', 3),|
-|(6000.00, 2400.00, 1200.00, 12.00, 'Bonos', 4),|
-|(8000.00, 3200.00, 1600.00, 20.00, 'Acciones', 5),|
-|(3000.00, 1200.00, 600.00, 6.00, 'Bonos', 6),|
-|(4000.00, 1600.00, 800.00, 8.00, 'Acciones', 7),|
-|(2000.00, 800.00, 400.00, 4.00, 'Bonos', 8),|
-|(9000.00, 3600.00, 1800.00, 18.00, 'Acciones', 9),|
-|(2500.00, 1000.00, 500.00, 5.00, 'Bonos', 10),|
-|(3500.00, 1400.00, 700.00, 7.00, 'Acciones', 11),|
-|(1500.00, 600.00, 300.00, 3.00, 'Bonos', 12),|
-|(5000.00, 2000.00, 1000.00, 10.00, 'Acciones', 13),|
-|(4500.00, 1800.00, 900.00, 9.00, 'Bonos', 14),|
-|(7000.00, 2800.00, 1400.00, 14.00, 'Acciones', 15),|
-|(2000.00, 800.00, 400.00, 4.00, 'Bonos', 16),|
-|(6000.00, 2400.00, 1200.00, 12.00, 'Acciones', 17),|
-|(3500.00, 1400.00, 700.00, 7.00, 'Bonos', 18),|
-|(8000.00, 3200.00, 1600.00, 16.00, 'Acciones', 19),|
-|(3000.00, 1200.00, 600.00, 6.00, 'Bonos', 20);|
-|-- Verificar la creación de las tablas y los registros|
-|SELECT * FROM Proyecto;|
-|SELECT * FROM Inversionista;|
-|SELECT * FROM Inversionista Proyecto;|
+
+-- Crear la tabla Proyecto
+CREATE TABLE Proyecto (
+    id_proyecto INT  IDENTITY(0, 1) PRIMARY KEY,
+    nombre_proyecto VARCHAR(100),
+    descripcion TEXT,
+    fecha_inicio DATE,
+    rendimiento_esperado DECIMAL(10, 2),
+    estrategia_inversion VARCHAR(100),
+    rendimiento_obtenido DECIMAL(10, 2)
+);
+
+-- Insertar registros en la tabla Proyecto
+INSERT INTO Proyecto (nombre_proyecto, descripcion, fecha_inicio, rendimiento_esperado, estrategia_inversion, rendimiento_obtenido) VALUES
+('Proyecto 1', 'Descripción del proyecto 1', '2023-01-01', 50000.00, 'Estrategia 1', 55000.00),
+('Proyecto 2', 'Descripción del proyecto 2', '2023-02-15', 75000.00, 'Estrategia 2', 82000.00),
+('Proyecto 3', 'Descripción del proyecto 3', '2023-03-10', 100000.00, 'Estrategia 3', 110000.00),
+('Proyecto 4', 'Descripción del proyecto 4', '2023-04-20', 30000.00, 'Estrategia 4', 32000.00),
+('Proyecto 5', 'Descripción del proyecto 5', '2023-05-05', 60000.00, 'Estrategia 5', 65000.00),
+('Proyecto 6', 'Descripción del proyecto 6', '2023-06-15', 90000.00, 'Estrategia 6', 95000.00),
+('Proyecto 7', 'Descripción del proyecto 7', '2023-07-20', 40000.00, 'Estrategia 7', 42000.00),
+('Proyecto 8', 'Descripción del proyecto 8', '2023-08-10', 80000.00, 'Estrategia 8', 86000.00),
+('Proyecto 9', 'Descripción del proyecto 9', '2023-09-05', 120000.00, 'Estrategia 9', 130000.00),
+('Proyecto 10', 'Descripción del proyecto 10', '2023-10-25', 20000.00, 'Estrategia 10', 21000.00),
+('Proyecto 11', 'Descripción del proyecto 11', '2023-11-15', 40000.00, 'Estrategia 11', 43000.00),
+('Proyecto 12', 'Descripción del proyecto 12', '2023-12-05', 30000.00, 'Estrategia 12', 32000.00),
+('Proyecto 13', 'Descripción del proyecto 13', '2024-01-10', 50000.00, 'Estrategia 13', 53000.00),
+('Proyecto 14', 'Descripción del proyecto 14', '2024-02-20', 70000.00, 'Estrategia 14', 75000.00),
+('Proyecto 15', 'Descripción del proyecto 15', '2024-03-15', 90000.00, 'Estrategia 15', 95000.00),
+('Proyecto 16', 'Descripción del proyecto 16', '2024-04-10', 60000.00, 'Estrategia 16', 64000.00),
+('Proyecto 17', 'Descripción del proyecto 17', '2024-05-05', 80000.00, 'Estrategia 17', 85000.00),
+('Proyecto 18', 'Descripción del proyecto 18', '2024-06-20', 100000.00, 'Estrategia 18', 105000.00),
+('Proyecto 19', 'Descripción del proyecto 19', '2024-07-15', 150000.00, 'Estrategia 19', 160000.00),
+('Proyecto 20', 'Descripción del proyecto 20', '2024-08-10', 200000.00, 'Estrategia 20', 220000.00);
+
+-- Crear la tabla Inversionista
+CREATE TABLE Inversionista (
+    id_usuario INT IDENTITY(0, 1) PRIMARY KEY,
+    cantidad_aportaciones INT,
+    nombre_inversionista VARCHAR(100),
+    correo_electronico VARCHAR(100),
+    direccion VARCHAR(150),
+    capital_inversionista DECIMAL(15, 2),
+    telefono VARCHAR(20)
+);
+
+-- Insertar registros en la tabla Inversionista
+INSERT INTO Inversionista (cantidad_aportaciones, nombre_inversionista, correo_electronico, direccion, capital_inversionista, telefono) VALUES
+(5, 'Inversionista 1', 'inversionista1@example.com', 'Calle 123, Ciudad A', 50000.00, '123456789'),
+(3, 'Inversionista 2', 'inversionista2@example.com', 'Avenida XYZ, Ciudad B', 75000.00, '987654321'),
+(7, 'Inversionista 3', 'inversionista3@example.com', 'Calle ABC, Ciudad C', 100000.00, '456789123'),
+(4, 'Inversionista 4', 'inversionista4@example.com', 'Avenida 456, Ciudad D', 30000.00, '789123456'),
+(6, 'Inversionista 5', 'inversionista5@example.com', 'Calle EFG, Ciudad E', 60000.00, '321654987'),
+(8, 'Inversionista 6', 'inversionista6@example.com', 'Avenida LMN, Ciudad F', 90000.00, '654987321'),
+(3, 'Inversionista 7', 'inversionista7@example.com', 'Calle OPQ, Ciudad G', 40000.00, '987321654'),
+(5, 'Inversionista 8', 'inversionista8@example.com', 'Avenida RST, Ciudad H', 80000.00, '321987654'),
+(9, 'Inversionista 9', 'inversionista9@example.com', 'Calle UVW, Ciudad I', 120000.00, '654321987'),
+(2, 'Inversionista 10', 'inversionista10@example.com', 'Avenida XYZ, Ciudad J', 20000.00, '789654123'),
+(7, 'Inversionista 11', 'inversionista11@example.com', 'Calle ABC, Ciudad K', 40000.00, '456123789'),
+(4, 'Inversionista 12', 'inversionista12@example.com', 'Avenida 123, Ciudad L', 30000.00, '321789456'),
+(6, 'Inversionista 13', 'inversionista13@example.com', 'Calle 456, Ciudad M', 50000.00, '987456123'),
+(8, 'Inversionista 14', 'inversionista14@example.com', 'Avenida 789, Ciudad N', 70000.00, '654123987'),
+(10, 'Inversionista 15', 'inversionista15@example.com', 'Calle 101112, Ciudad O', 90000.00, '789456123'),
+(5, 'Inversionista 16', 'inversionista16@example.com', 'Avenida 131415, Ciudad P', 60000.00, '321987456'),
+(7, 'Inversionista 17', 'inversionista17@example.com', 'Calle 161718, Ciudad Q', 80000.00, '654321789'),
+(9, 'Inversionista 18', 'inversionista18@example.com', 'Avenida 192021, Ciudad R', 100000.00, '987654321'),
+(12, 'Inversionista 19', 'inversionista19@example.com', 'Calle 222324, Ciudad S', 150000.00, '321789654'),
+(15, 'Inversionista 20', 'inversionista20@example.com', 'Avenida 252627, Ciudad T', 200000.00, '654321987');
+
+-- Crear la tabla Inversionista Proyecto
+CREATE TABLE Inversionista_Proyecto 
+    (
+    id_reinversiones INT IDENTITY(0, 1) PRIMARY KEY,
+    aportacion DECIMAL(15, 2),
+    dividendos DECIMAL(15, 2),
+    reinversiones DECIMAL(15, 2),
+    porcentaje_participacion DECIMAL(5, 2),
+    instrumentos_financieros VARCHAR(100),
+    id_proyecto INT,
+    id_inversionista INT,
+    FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto),
+    FOREIGN KEY (id_inversionista) REFERENCES Inversionista(id_usuario)
+);
+
+-- Insertar registros en la tabla Inversionista Proyecto
+INSERT INTO Inversionista_Proyecto (aportacion, dividendos, reinversiones, porcentaje_participacion, instrumentos_financieros, id_inversionista) VALUES
+(5000.00, 2000.00, 1000.00, 10.00, 'Acciones', 1),
+(7000.00, 3000.00, 1500.00, 7.00, 'Bonos', 2),
+(10000.00, 4000.00, 2000.00, 15.00, 'Acciones', 3),
+(6000.00, 2400.00, 1200.00, 12.00, 'Bonos', 4),
+(8000.00, 3200.00, 1600.00, 20.00, 'Acciones', 5),
+(3000.00, 1200.00, 600.00, 6.00, 'Bonos', 6),
+(4000.00, 1600.00, 800.00, 8.00, 'Acciones', 7),
+(2000.00, 800.00, 400.00, 4.00, 'Bonos', 8),
+(9000.00, 3600.00, 1800.00, 18.00, 'Acciones', 9),
+(2500.00, 1000.00, 500.00, 5.00, 'Bonos', 10),
+(3500.00, 1400.00, 700.00, 7.00, 'Acciones', 11),
+(1500.00, 600.00, 300.00, 3.00, 'Bonos', 12),
+(5000.00, 2000.00, 1000.00, 10.00, 'Acciones', 13),
+(4500.00, 1800.00, 900.00, 9.00, 'Bonos', 14),
+(7000.00, 2800.00, 1400.00, 14.00, 'Acciones', 15),
+(2000.00, 800.00, 400.00, 4.00, 'Bonos', 16),
+(6000.00, 2400.00, 1200.00, 12.00, 'Acciones', 17),
+(3500.00, 1400.00, 700.00, 7.00, 'Bonos', 18),
+(8000.00, 3200.00, 1600.00, 16.00, 'Acciones', 19),
+(3000.00, 1200.00, 600.00, 6.00, 'Bonos', 20);
+
+-- Verificar la creación de las tablas y los registros
+SELECT * FROM Proyecto;
+SELECT * FROM Inversionista;
+SELECT * FROM Inversionista Proyecto;
